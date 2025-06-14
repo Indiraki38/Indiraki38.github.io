@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Final Responsive CSS for Home, Skills, Education, Portfolio */
 
 /* Global Styles */
@@ -536,6 +537,11 @@ span {
 .home-content p {
     animation-delay: 1.5s;
 =======
+=======
+/* Final Responsive CSS for Home, Skills, Education, Portfolio */
+
+/* Global Styles */
+>>>>>>> cb518c1 (initial upload)
 * {
     margin: 0;
     padding: 0;
@@ -546,11 +552,11 @@ span {
 
 body {
     min-height: 100vh;
-    background-position: right;
     background-color: #4E6E81;
     color: #FCFFE7;
 }
 
+/* Header */
 .header {
     position: fixed;
     top: 0;
@@ -563,6 +569,7 @@ body {
     align-items: center;
     backdrop-filter: blur(5px);
     border-bottom: 3px solid rgba(80, 80, 80, .2);
+    z-index: 10;
 }
 
 .logo {
@@ -586,132 +593,63 @@ body {
     color: #df0303;
 }
 
+/* Home */
 .home {
-    height: 100vh;
     display: flex;
-    align-items: center;
-    padding: 0 10%;
-    background: url(images/Profile_Pict.JPG) no-repeat;
-    background-size: 45%;
-    background-position: right;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 7rem 5% 4rem;
+    min-height: 100vh;
+    flex-wrap: wrap;
 }
 
 .home-content {
-    max-width: 600px;
+    margin-top: 2rem;
+    flex: 1 1 400px;
 }
 
 .home-content h1 {
-    position: relative;
     font-size: 56px;
-    font-weight: 700px;
+    font-weight: 700;
     line-height: 1.2;
 }
 
-.home-content h1::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #4E6E81;
-    animation: showRight 1s ease forwards;
-    animation-delay: 1s;
-}
-
 .home-content h3 {
-    position: relative;
     font-size: 40px;
     font-weight: 700;
     color: #BAD7E9;
 }
 
-.home-content h3::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #4E6E81;
-    animation: showRight 1s ease forwards;
-    animation-delay: 1.3s;
-}
-
 .home-content p {
-    position: relative;
     font-size: 16px;
     margin: 20px 0 40px;
 }
 
-.home-content p::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #4E6E81;
-    animation: showRight 1s ease forwards;
-    animation-delay: 1.5s;
-}
-
-.home-content .btn-box {
-    position: absolute;
+.btn-box {
     display: flex;
-    justify-content: space-between;
-    width: 345px;
-    height: 50px;
-}
-
-.home-content .btn-box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #4E6E81;
-    animation: showRight 1s ease forwards;
-    animation-delay: 1.9s;
-    z-index: 2;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .btn-box a {
-    position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 150px;
-    height: 100%;
+    height: 50px;
     background: #FCFFE7;
     border: 2px solid #FCFFE7;
     border-radius: 8px;
     font-size: 19px;
     color: #2B3467;
     text-decoration: none;
-    font-weight: 60;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-}
-
-.btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: #F9DBBB;
-    border-radius: 4rem;
-    box-shadow: 0 0 1rem #2B3467;
-    font-size: 1.6rem;
-    color: #1c2142;
-    letter-spacing: .1rem;
     font-weight: 600;
-    transition: .5s ease;
-}
-
-.btn:hover {
-    box-shadow: none;
+    letter-spacing: 1px;
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .btn-box a:hover {
@@ -722,7 +660,6 @@ body {
     background: transparent;
     color: #FCFFE7;
 }
-
 
 .btn-box a::before {
     content: '';
@@ -740,30 +677,31 @@ body {
     width: 100%;
 }
 
+.home-img {
+    flex: 1 1 300px; /* sudah bagus */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img img {
+    width: 100%;
+    max-width: 450px; /* BESARKAN ukuran maksimum */
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
 .home-sci {
-    position: absolute;
-    bottom: 40px;
+    margin-top: 30px;
     width: 170px;
     display: flex;
     justify-content: space-between;
-}
-
-.home-sci::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #4E6E81;
-    animation: showRight 1s ease forwards;
-    animation-delay: 2.3s;
-    z-index: 2;
+    position: relative; /* atau hapus saja jika tidak perlu absolute */
 }
 
 .home-sci a {
     display: inline-flex;
-    position: relative;
     justify-content: center;
     align-items: center;
     width: 40px;
@@ -774,9 +712,10 @@ body {
     font-size: 20px;
     color: #FCFFE7;
     text-decoration: none;
+    transition: .5s;
+    position: relative;
     z-index: 1;
     overflow: hidden;
-    transition: .5s;
 }
 
 .home-sci a:hover {
@@ -809,10 +748,10 @@ span {
     color: #BAD7E9;
 }
 
+/* Skills */
 .skills {
-    min-height: auto;
-    padding-bottom: 7rem;
     background: #2B3467;
+    padding: 5rem 5% 7rem;
 }
 
 .skills .skills-row {
@@ -821,21 +760,20 @@ span {
     gap: 5rem;
 }
 
-.skills-row .skills-column {
+.skills-column {
     flex: 1 1 40rem;
 }
 
 .skills-column .tittle {
     font-size: 2.5rem;
-    margin: 0 0 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .skills-box .skills-content {
-    position: relative;
-    border: .2rem solid #FCFFE7;
+    border: 2px solid #FCFFE7;
     border-radius: .6rem;
-    padding: .5rem 1.5rem;
-    z-index: 1;
+    padding: 1rem 1.5rem;
+    position: relative;
     overflow: hidden;
 }
 
@@ -844,8 +782,8 @@ span {
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;
     height: 100%;
+    width: 0;
     background: #1c2142;
     z-index: -1;
     transition: .5s;
@@ -856,21 +794,17 @@ span {
 }
 
 .skills-content .progress h3 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     display: flex;
     justify-content: space-between;
 }
 
-.skills-content.progress h3 span {
-    color: #FCFFE7;
-}
-
 .skills-content .progress .bar {
     height: 2.5rem;
+    border: 2px solid #FCFFE7;
     border-radius: .6rem;
-    border: .2rem solid #FCFFE7;
-    padding: .5rem;
     margin: 1rem 0;
+    padding: .5rem;
 }
 
 .skills-content .progress .bar span {
@@ -912,13 +846,10 @@ span {
     width: 80%;
 }
 
+/* Education */
 .education {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: auto;
-    padding-bottom: 5rem;
+    background: #1c2142;
+    padding: 5rem 5%;
 }
 
 .education .education-row {
@@ -927,41 +858,23 @@ span {
     gap: 5rem;
 }
 
-.education-row .education-column {
+.education-column {
     flex: 1 1 40rem;
-}
-
-.education-column .tittle {
-    font-size: 2.5rem;
-    margin: 0 0 1.5rem 2rem;
-}
-
-.education-column .education-box {
-    border-left: .2rem solid #1c2142;
 }
 
 .education-box .education-content {
     position: relative;
+    border-left: 2px solid #BAD7E9;
     padding-left: 2rem;
-}
-
-.education-box .education-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -1.1rem;
-    width: 2rem;
-    height: 2rem;
-    background: #1c2142;
-    border-radius: 50%;
+    margin-bottom: 2rem;
 }
 
 .education-content .content {
-    position: relative;
-    padding: 1.5rem;
-    border: .2rem solid #1c2142;
+    border: 2px solid #BAD7E9;
     border-radius: .6rem;
-    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: transparent;
+    position: relative;
     overflow: hidden;
     z-index: 1;
 }
@@ -971,9 +884,9 @@ span {
     position: absolute;
     top: 0;
     left: 0;
-    width: 0%;
+    width: 0;
     height: 100%;
-    background: #1c2142;
+    background: #2B3467;
     z-index: -1;
     transition: .5s;
 }
@@ -982,38 +895,37 @@ span {
     width: 100%;
 }
 
-.education-content .content .year {
-    font-size: 1.5rem;
-    color: #FCFFE7;
-    padding-bottom: .5rem;
+.education-content .year {
+    font-size: 1.4rem;
+    color: #BAD7E9;
+    margin-bottom: .5rem;
 }
 
-.education-content .content .year i {
-    padding-right: .5rem;
-}
-
+/* Portfolio */
 .portofolio {
-    background: #1c2142;
-    padding-bottom: 5rem;
-}
-
-.portofolio h2 {
-    margin-bottom: 4rem;
+    background: #2B3467;
+    padding: 5rem 5%;
 }
 
 .portofolio-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
-.portofolio-container .portofolio-box {
+.portofolio-box {
     position: relative;
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem #BAD7E9;
+    border-radius: 1rem;
     overflow: hidden;
-    display: flex;
+    box-shadow: 0 0 1rem #BAD7E9;
+}
+
+.portofolio-box video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: inherit;
+    display: block;
 }
 
 .portofolio-box img {
@@ -1025,7 +937,7 @@ span {
     transform: scale(1.1);
 }
 
-.portofolio-box .portofolio-layer {
+.portofolio-layer {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1037,96 +949,134 @@ span {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 0.4rem;
+    padding: 1rem;
     transform: translateY(100%);
     transition: .5s ease;
-    overflow: hidden;
 }
 
 .portofolio-box:hover .portofolio-layer {
-    transform: translateY(0%);
+    transform: translateY(0);
 }
 
 .portofolio-layer h4 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    color: #FCFFE7;
 }
 
 .portofolio-layer p {
     font-size: 1rem;
-    margin: .3rem 0 1rem;
-}
-
-.contact h2 {
-    margin-bottom: 3rem;
-}
-
-.contact form {
-    max-width: 70rem;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.contact form .input-box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.contact form .input-box input,
-.contact form textarea {
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
     color: #FCFFE7;
-    background: #1c2142;
-    border-radius: .8rem;
-    margin: .7rem 0;
 }
 
-.contact form .input-box input {
-    width: 49%;
-}
-
-.contact form textarea {
-    resize: none;
-}
-
-.contact form .btn-box2 {
-    margin-top: 2rem;
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: #FCFFE7;
     cursor: pointer;
 }
 
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 2rem 9%;
-    background: #2B3467;
-}
-
-.footer-text p {
-    font-size: 1.6rem;
-}
-
-.footer-iconTop a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: .8rem;
-    background: #F9DBBB;
-    border-radius: .8rem;
-}
-
-.footer-text a i {
-    font-size: 2.4rem;
-    color: #BAD7E9;
-}
-
-@keyframes showRight {
-    100% {
-        width: 0;
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
     }
+<<<<<<< HEAD
 >>>>>>> cf7e804 (initial commit)
+=======
+
+     .menu-icon {
+        display: block;
+    }
+    
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 8px;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 0.5rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 6.5rem 1.5rem 3rem;
+    }
+
+    .btn-box {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-box a {
+        width: 100%;
+    }
+
+    .home-img {
+        margin-top: 2rem;
+    }
+
+    .home-img img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+    }
+
+    .home-sci {
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+
+    .skills .skills-row,
+    .education .education-row {
+        flex-direction: column;
+    }
+
+    .portofolio-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.home-content h1,
+.home-content h3,
+.home-content p {
+    animation: fadeSlide 1s ease forwards;
+    opacity: 0;
+}
+
+.home-content h1 {
+    animation-delay: 0.5s;
+}
+
+.home-content h3 {
+    animation-delay: 1s;
+}
+
+.home-content p {
+    animation-delay: 1.5s;
+>>>>>>> cb518c1 (initial upload)
 }
