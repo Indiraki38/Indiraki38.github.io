@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 /* Final Responsive CSS for Home, Skills, Education, Portfolio */
 
 /* Global Styles */
@@ -536,12 +534,10 @@ span {
 
 .home-content p {
     animation-delay: 1.5s;
-=======
-=======
+}
 /* Final Responsive CSS for Home, Skills, Education, Portfolio */
 
 /* Global Styles */
->>>>>>> cb518c1 (initial upload)
 * {
     margin: 0;
     padding: 0;
@@ -982,9 +978,6 @@ span {
         flex-direction: column;
         align-items: flex-start;
     }
-<<<<<<< HEAD
->>>>>>> cf7e804 (initial commit)
-=======
 
      .menu-icon {
         display: block;
@@ -1078,5 +1071,4 @@ span {
 
 .home-content p {
     animation-delay: 1.5s;
->>>>>>> cb518c1 (initial upload)
 }
